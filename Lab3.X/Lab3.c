@@ -16,7 +16,7 @@
 #include "lcd.h"
 
 #define MAXSECONDS 86400
-#define COUNTSFORSECOND 31249
+#define COUNTSFORSECOND 31702               //Originally 31249, extra 453 counts is to account for clock drift of 52.12 seconds per hour ahead of reference
 
 FILE lcd_str = FDEV_SETUP_STREAM(lcd_putchar, NULL, _FDEV_SETUP_WRITE);
 
