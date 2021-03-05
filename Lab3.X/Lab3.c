@@ -53,7 +53,7 @@ int main(void) {
     }
     fprintf(&lcd_str, "\x1b\x0f"); //enable blinking cursor
     TCCR1B |= (1 << CS12);
-    OCR1A = 60000;
+    OCR1A = 60000;                                  //NOTE: NOT REPRESENTATIVE OF ONE SECOND! Used strictly to update displayed instructions
     TIMSK1 |= (1 << OCIE1A);
     TCCR1B |= (1 << WGM12);
     sei();
